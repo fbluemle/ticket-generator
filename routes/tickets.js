@@ -14,7 +14,7 @@ router.post('/generate', function(req, res, next) {
   res.statusCode = 200;
   res.contentType("application/pdf");
   var tg = new PdfGenerator(req.body.template, req.body.startDate, req.body.days);
-  res.setHeader('Content-Disposition', 'attachment; filename="' + tg.getFilename() + '"');
+  // res.setHeader('Content-Disposition', 'attachment; filename="' + tg.getFilename() + '"');
   tg.generate(res);
 });
 

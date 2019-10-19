@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
 
+var PdfGenerator = require('../services/PdfGenerator');
+
 /* GET tickets. */
 router.get('/', function(req, res, next) {
   const r = JSON.stringify(req.query);
@@ -9,8 +11,11 @@ router.get('/', function(req, res, next) {
 
 /* POST generate tickets. */
 router.post('/generate', function(req, res, next) {
-  const r = JSON.stringify(req.body);
-  res.send('posted: ' + r);
+  res.statusCode = 200;
+  res.contentType("application/pdf");
+  var tg = new PdfGenerator(req.body.template, req.body.startDate, req.body.days);
+  res.setHeader('Content-Disposition', 'attachment; filename="' + tg.getFilename() + '"');
+  tg.generate(res);
 });
 
 module.exports = router;

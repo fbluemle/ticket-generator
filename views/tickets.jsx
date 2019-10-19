@@ -29,6 +29,13 @@ class Tickets extends React.Component {
             </select>
           </div>
           <div>
+            <label>File Type</label>
+            <select name="fileType">
+              <option value="pdf">pdf</option>
+              <option value="png">png</option>
+            </select>
+          </div>
+          <div>
             <input type="submit" value="Generate"/>
           </div>
         </form>

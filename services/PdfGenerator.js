@@ -21,8 +21,7 @@ class PdfGenerator {
     doc.image('sbp-template.png', {
       fit: [450, 300]
     });
-    doc.fontSize(40)
-      .text('OCT 15 2019', 100, 100);
+    doc.fontSize(40).text('OCT 15 2019', 100, 100);
     doc.end();
   }
 

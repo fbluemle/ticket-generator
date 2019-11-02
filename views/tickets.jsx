@@ -17,7 +17,7 @@ class Tickets extends React.Component {
             <label htmlFor="start">Start date:</label>
             <input type="date" id="start" name="ticket-start"
                    value="2019-10-14"
-                   min="2019-10-14" max="2019-12-14"/>
+                   min="2019-10-14" max="2019-12-14" />
           </div>
           <div>
             <label>Number of days</label>
@@ -36,7 +36,7 @@ class Tickets extends React.Component {
             </select>
           </div>
           <div>
-            <input type="submit" value="Generate"/>
+            <input type="submit" value="Generate" />
           </div>
         </form>
       </Layout>

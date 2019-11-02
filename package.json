@@ -5,7 +5,8 @@
   "scripts": {
     "start": "node ./bin/www",
     "dev": "nodemon ./bin/www",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "format": "prettier-eslint --write \"**/*.js\""
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -19,12 +20,14 @@
     "react-dom": "^16.10.2"
   },
   "devDependencies": {
+    "@react-native-community/eslint-config": "^0.0.5",
     "eslint": "^6.6.0",
     "eslint-config-prettier": "^6.5.0",
-    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-eslint-comments": "^3.1.2",
     "eslint-plugin-react": "^7.16.0",
     "eslint-plugin-react-hooks": "^2.2.0",
     "nodemon": "^1.19.4",
-    "prettier": "^1.18.2"
+    "prettier": "^1.18.2",
+    "prettier-eslint-cli": "^5.0.0"
   }
 }

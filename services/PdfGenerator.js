@@ -16,10 +16,10 @@ class PdfGenerator {
     // doc.pipe(fs.createWriteStream(this._fileName));
     doc.pipe(dest);
     doc.image('sbp-template.png', {
-      fit: [250, 300]
+      fit: [250, 300],
     });
     doc.image('sbp-template.png', {
-      fit: [450, 300]
+      fit: [450, 300],
     });
     doc.fontSize(40).text('OCT 15 2019', 100, 100);
     doc.end();

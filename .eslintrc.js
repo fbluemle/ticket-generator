@@ -168,10 +168,12 @@ module.exports = {
     'no-trailing-spaces': 1, // disallow trailing whitespace at the end of lines
     'no-underscore-dangle': 0, // disallow dangling underscores in identifiers
     'no-mixed-spaces-and-tabs': 1, // disallow mixed spaces and tabs for indentation
+    'object-curly-spacing': 2,
     quotes: [1, 'single', 'avoid-escape'], // specify whether double or single quotes should be used
     'quote-props': 0, // require quotes around object literal property names (off by default)
     semi: 1, // require or disallow use of semicolons instead of ASI
     'sort-vars': 0, // sort variables within the same declaration block (off by default)
+    'space-before-function-paren': [2, {"anonymous": "always", "named": "never", "asyncArrow": "always"}],
     'space-in-brackets': 0, // require or disallow spaces inside brackets (off by default)
     'space-in-parens': 0, // require or disallow spaces inside parentheses (off by default)
     'space-infix-ops': 1, // require spaces around operators
